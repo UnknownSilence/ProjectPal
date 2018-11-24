@@ -1,0 +1,66 @@
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+html {
+    font-family: 'Source Code Pro', monospace;
+    width: 100vw;
+    height: 100vh;
+    animation-name: fadein;
+    animation-duration: 4s;
+}
+
+body {
+    background-color: #2C2F33;
+}
+
+.myFields {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 1;
+    right: 1;
+    margin: auto;
+}
+
+.MyBtns {
+    text-align: center;
+    background-color: #7289DA;
+    color: white;
+    margin: auto;
+}
+
+
+button:hover {
+    transform: scale(1.1)
+}
+
+#emailTextField {
+    background-color: #23272A;
+    color: #ffffff
+}
+
+#passwordTextField {
+    background-color: #23272A;
+    color: #ffffff
+}
+
+.alignText {
+    text-align: center;
+}
+
+img {
+    margin: 0 auto;
+    text-align: center;
+}

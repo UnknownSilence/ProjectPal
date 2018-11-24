@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ProjectPal | The Coding Friend</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" />
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/jquery-ui-1.12.1.custom/jquery-ui.css" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <a style="width: 100%; height: 500px;"><img id="generateIdeaBtn" title="Generate Idea" data-toggle="tooltip" src="assets/img/icons8-innovation-48.png"></a>
+  </div>
+  <div class="container">
+    <div class="centerPage">
+      <div class="container">
+        <div class="row" style="padding-top: 20px;">
+          <input type="text" id="myInput" class="form-control" placeholder="Search..." />
+        </div>
+        <div class="row listBox">
+          <h1 style="color: #7289da;">My Projects</h1>
+          <ul id="projectList"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="entryArea">
+      <div class="container">
+        <div class="row" style="text-align: center;">
+          <div class="col-sm">
+            <h1 class="labelText">Manage Projects</h1>
+          </div>
+        </div>
+        <div class="row" style="text-align: center;">
+          <textarea class="form-control" id="entryInput" rows="10" cols="50"></textarea>
+
+          <br />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <button title="Add Project to List." data-toggle="tooltip" class="btn btn-secondary addBtn" id="addButton">
+          Add Project<img src="assets/img/icons8-plus-32.png" />
+        </button>
+      </div>
+      <div class="row">
+        <button title="Remove ALL items from list." data-toggle="tooltip" class="btn btn-danger removeAllBtn" id="removeAllBtn">
+          Remove All<img src="assets/img/icons8-delete-trash-24.png" />
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="clearDialog" title="Are you sure?">
+    <p>
+      Are you sure you want to remove all items? This action cannot be undone.
+    </p>
+  </div>
+  <div id="addDialog" title="Are you sure?">
+    <p>Are you sure you want to add this item?</p>
+  </div>
+  <div id="errorDialog" title="Are you sure?">
+    <p>There was a problem with your submission, please try again!</p>
+  </div>
+  <div id="removeDialog" title="Are you sure?">
+    <p>Are you sure you want to delete this Project?</p>
+  </div>
+  <div id="editDialog" title="Are you sure?">
+    <p>
+      Are you sure you want to edit this entry? Project details will be moved
+      to the manager for edit.
+    </p>
+  </div>
+  <div id="genIdeaDialog" title="Generating Idea">
+    <p>
+      Your randomly generated idea is...
+    </p>
+    <br>
+    <br>
+    <span id="ideaDisplayPrefix">A</span><span id="ideaDisplaySuffix"></span>
+  </div>
+
+  <script>
+    if (typeof module === "object") {
+      window.module = module;
+      module = undefined;
+    }
+  </script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  <script>
+    if (window.module) module = window.module;
+  </script>
+  <script>
+    require("./js/mainPage.js");
+  </script>
+</body>
+
+</html>
