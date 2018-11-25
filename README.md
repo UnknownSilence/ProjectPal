@@ -13,7 +13,9 @@ Features
 
 -Data consistency through localstorage
 
-![](ProjectPal/app/src/assets/img/demoAPP.PNG)
+![alt text](/app/src/assets/img/demoAPP.PNG)
+![alt text](/app/src/assets/img/demoapp2.PNG)
+      
       
 
 
